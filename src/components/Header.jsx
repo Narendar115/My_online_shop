@@ -6,9 +6,12 @@ export default function Header() {
   const { user } = useContext(AppContext);
   return (
     <div>
-      <h1>My Online Shop</h1>
-      <Link to="/">Home</Link>-<Link to="/cart">Cart</Link>-
+        <header className="header">
+          <h1 style={{textAlign:"left"}}>My Online Shop</h1>
+      <Link to="/">Home</Link>-
+      <Link to="/cart">Cart</Link>-
       <Link to="/order">Order</Link>-
+        </header>
       {user.token ? (
         <Link to="/logout">Logout</Link>
       ) : (
